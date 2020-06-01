@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
-//mongodb://localhost:27017/phones
-const MONGODB_URI = process.env.MONGODB_URI || '';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/phones';
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true })
   .then(() => console.info(`Successfully connected to the database ${MONGODB_URI}`))
