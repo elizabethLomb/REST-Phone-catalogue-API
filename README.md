@@ -1,8 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Phone Catalogue RESTful API
 
 In the project directory, you can run:
+
+### `npm i`
+
+For install all dependencies and devDependencies necessary for the API run correctly
 
 ### `npm run dev`
 
