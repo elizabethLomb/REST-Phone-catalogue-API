@@ -6,6 +6,8 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const favicon = require('serve-favicon')
+const path = require('path')
 
 /**
  * DB config
@@ -20,6 +22,8 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico'))) 
 
 //CORS on ExpressJS crossorigin problems
 app.use(function(req, res, next) {
@@ -72,7 +76,7 @@ app.use(function (error, req, res, next) {
 /** 
  * Listen on provided port
  */
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(process.env.PORT || '0.0.0.0');
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
