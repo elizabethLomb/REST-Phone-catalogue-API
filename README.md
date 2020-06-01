@@ -1,5 +1,7 @@
 ## Phone Catalogue RESTful API
 
+Node + Express + Mongodb
+
 In the project directory, you can run:
 
 ### `npm i`
